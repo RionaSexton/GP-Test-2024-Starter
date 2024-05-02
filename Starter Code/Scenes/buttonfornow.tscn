@@ -13,14 +13,14 @@ var mynode = preload(\"res://Scenes/the_guy.tscn\")
 
 func _on_spawn_pressed():
 	print(\"You did it!\")
-	inst(Vector2(0,0))
+	
+	inst(Vector2(150,150))
 
 	
 func inst(pos):
 	var instance = mynode.instantiate()
 	instance.position = pos
 	add_child(instance)
-	
 "
 
 [sub_resource type="GDScript" id="GDScript_7o7eb"]

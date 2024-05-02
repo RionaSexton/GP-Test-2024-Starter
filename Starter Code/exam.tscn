@@ -26,6 +26,7 @@ position = Vector2(54, -1)
 position = Vector2(301, 495)
 
 [node name="Killzone" parent="." instance=ExtResource("6_xa3p2")]
+visible = false
 position = Vector2(497, 865)
 script = null
 
