@@ -1,3 +1,37 @@
-[gd_scene format=3 uid="uid://bunyohpobvu8b"]
+[gd_scene load_steps=8 format=3 uid="uid://bunyohpobvu8b"]
+
+[ext_resource type="Texture2D" uid="uid://mxxn1wfdfuli" path="res://sprites/10x10.png" id="1_4dwok"]
+[ext_resource type="Script" path="res://Scripts/Spawningin.gd" id="1_j7d2v"]
+[ext_resource type="PackedScene" uid="uid://cghmsn8bhh4lr" path="res://Scenes/buttonfornow.tscn" id="2_x0hck"]
+[ext_resource type="PackedScene" uid="uid://ct2x4rqba7jcg" path="res://Scenes/the_guy.tscn" id="3_88bxa"]
+[ext_resource type="PackedScene" uid="uid://culeh8urcv8t1" path="res://Scripts/Sliderattempt.tscn" id="6_a5cw5"]
+[ext_resource type="PackedScene" uid="uid://dd2w0ofwh1w8b" path="res://Scenes/killzone.tscn" id="6_xa3p2"]
+[ext_resource type="PackedScene" uid="uid://l02isa5imub2" path="res://Scenes/workingslider.tscn" id="7_4tymb"]
 
 [node name="root" type="Node2D"]
+script = ExtResource("1_j7d2v")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(513, 513)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(514, 510)
+scale = Vector2(14.5, 14.525)
+texture = ExtResource("1_4dwok")
+
+[node name="buttonfornow" parent="." instance=ExtResource("2_x0hck")]
+position = Vector2(54, -1)
+
+[node name="Node2D" parent="." instance=ExtResource("3_88bxa")]
+position = Vector2(301, 495)
+
+[node name="Killzone" parent="." instance=ExtResource("6_xa3p2")]
+position = Vector2(497, 865)
+script = null
+
+[node name="Node2D2" parent="." instance=ExtResource("6_a5cw5")]
+visible = false
+position = Vector2(30, 40)
+
+[node name="Workingslider" parent="." instance=ExtResource("7_4tymb")]
+position = Vector2(39, 30)

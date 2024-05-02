@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://cghmsn8bhh4lr"]
+
+[sub_resource type="GDScript" id="GDScript_ee2el"]
+script/source = "extends Node2D
+
+
+var mynode = preload(\"res://Scenes/the_guy.tscn\")
+
+#var rng = RandomNumberGenerator.new()
+#var rngX = rng.randi_range(0, screenSize.x)
+#var rngY = rng.randi_range(0, screenSize.y)
+
+
+func _on_spawn_pressed():
+	print(\"You did it!\")
+	inst(Vector2(0,0))
+
+	
+func inst(pos):
+	var instance = mynode.instantiate()
+	instance.position = pos
+	add_child(instance)
+	
+"
+
+[sub_resource type="GDScript" id="GDScript_7o7eb"]
+resource_name = "ButtonScript"
+script/source = "extends Button
+
+
+"
+
+[node name="buttonfornow" type="Node2D"]
+script = SubResource("GDScript_ee2el")
+
+[node name="Spawn" type="Button" parent="."]
+offset_left = 65.0
+offset_top = 126.0
+offset_right = 250.0
+offset_bottom = 213.0
+text = "Create Nodes"
+script = SubResource("GDScript_7o7eb")
+
+[connection signal="pressed" from="Spawn" to="." method="_on_spawn_pressed"]

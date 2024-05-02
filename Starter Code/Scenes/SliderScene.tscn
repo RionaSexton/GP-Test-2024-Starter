@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://6qc107ix7jlh"]
+
+[ext_resource type="Script" path="res://HSlider.gd" id="1_7otlk"]
+
+[node name="Sliders" type="Node2D"]
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 71.0
+offset_top = 30.0
+offset_right = 219.0
+offset_bottom = 52.0
+script = ExtResource("1_7otlk")
+
+[node name="Count" type="Label" parent="HSlider"]
+layout_mode = 0
+offset_left = -57.0
+offset_top = -2.0
+offset_right = -6.0
+offset_bottom = 21.0
+text = "Count:"
+
+[node name="NumberLabel" type="Label" parent="HSlider"]
+layout_mode = 0
+offset_left = 158.0
+offset_top = -2.0
+offset_right = 198.0
+offset_bottom = 21.0
+text = "X"
